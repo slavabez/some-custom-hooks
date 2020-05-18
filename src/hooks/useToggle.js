@@ -1,5 +1,13 @@
-const useToggle = () => {
-  return "hello";
-};
+import { useState } from "react";
 
-export default useToggle;
+export const useToggle = (initialValue) => {
+  const [isToggled, setIsToggled] = useState(initialValue);
+  const toggle = () => {
+    setIsToggled((prevState) => !prevState);
+  };
+
+  return {
+    isToggled,
+    toggle
+  };
+};
