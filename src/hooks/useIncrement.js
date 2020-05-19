@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useIncrement = ({
+export const useIncrement = ({
   initialValue = 0,
   minValue = -10000,
   maxValue = 10000,
@@ -21,4 +21,3 @@ const useIncrement = ({
   return [value, { increment, decrement, reset }];
 };
 
-export default useIncrement;

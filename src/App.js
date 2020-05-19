@@ -6,19 +6,22 @@ import blue from "./blue.png";
 import purp from "./purp.png";
 import black from "./black.png";
 import green from "./green.png";
-import Mount from "./components/Mount";
+import Hover from "./components/Hover";
+import PageWrapper from "./components/PageWrapper";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div>
+    <PageWrapper>
       <Header>
         <Menu />
         <h1>Header</h1>
       </Header>
+      <Nav />
       <Container>
         <h2>Super Cool</h2>
-        <Mount />
         <CardGrid>
+          <Hover />
           <Card style={{ background: "var(--purp)" }}>
             <h3>Some card</h3>
             <img src={purp} />
@@ -37,7 +40,7 @@ function App() {
           </Card>
         </CardGrid>
       </Container>
-    </div>
+    </PageWrapper>
   );
 }
 

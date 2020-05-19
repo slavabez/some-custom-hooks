@@ -1,6 +1,5 @@
 import React from "react";
-import { useMount, useUnmount } from "../hooks/useMount";
-import { useToggle } from "../hooks/useToggle";
+import { useMount, useToggle, useUnmount } from "../hooks";
 
 const Mount = () => {
   const { isToggled, toggle } = useToggle();
@@ -18,7 +17,7 @@ export const Unmount = () => {
     console.log(`I'm in`);
   });
   useUnmount(() => {
-    console.log(`I'm gone`)
+    console.log(`I'm gone`);
   });
 
   return <div>Unmount me</div>;

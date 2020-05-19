@@ -1,11 +1,11 @@
 import React from "react";
-import useIncrement from "../hooks/useIncrement";
+import { useIncrement } from "../hooks";
 
 const Increment = () => {
   const [volume, { increment, decrement, reset }] = useIncrement({
     initialValue: 15,
     maxValue: 20,
-    minValue: 0
+    minValue: 0,
   });
 
   return (
