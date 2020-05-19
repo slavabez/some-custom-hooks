@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "./PageWrapper";
 
 const Nav = () => {
+  const { isMenuOpen, toggleMenu } = useContext(AppContext);
+
+  if (!isMenuOpen) return null;
   return (
     <nav
       style={{
@@ -14,7 +18,7 @@ const Nav = () => {
       }}
     >
       <h1>Hello</h1>
-      <button>Close</button>
+      <button onClick={toggleMenu}>Close</button>
     </nav>
   );
 };
