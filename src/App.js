@@ -7,7 +7,7 @@ import purp from "./purp.png";
 import black from "./black.png";
 import green from "./green.png";
 import Hover from "./components/Hover";
-import PageWrapper from "./components/PageWrapper";
+import { PageWrapper } from "./state";
 import Nav from "./components/Nav";
 
 function App() {
