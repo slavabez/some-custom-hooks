@@ -2,13 +2,19 @@ import React from "react";
 import useIncrement from "../hooks/useIncrement";
 
 const Increment = () => {
-  const [value, { increment, decrement }] = useIncrement();
+  const [volume, { increment, decrement, reset }] = useIncrement({
+    initialValue: 15,
+    maxValue: 20,
+    minValue: 0
+  });
 
   return (
     <div>
+      <h3>Volume</h3>
       <button onClick={decrement}>-</button>
-      {value}
+      <span>{volume}</span>
       <button onClick={increment}>+</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 };

@@ -1,16 +1,24 @@
 import { useState } from "react";
 
-const useIncrement = (initialValue = 0) => {
+const useIncrement = ({
+  initialValue = 0,
+  minValue = -10000,
+  maxValue = 10000,
+}) => {
   const [value, setValue] = useState(initialValue);
 
   const increment = () => {
-    setValue((prevState) => prevState + 1);
+    setValue((prevState) => (prevState >= maxValue ? maxValue : prevState + 1));
   };
   const decrement = () => {
-    setValue((prevState) => prevState - 1);
+    setValue((prevState) => (prevState <= minValue ? minValue : prevState - 1));
   };
 
-  return [value, { increment, decrement }];
+  const reset = () => {
+    setValue(initialValue);
+  };
+
+  return [value, { increment, decrement, reset }];
 };
 
 export default useIncrement;
