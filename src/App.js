@@ -9,6 +9,7 @@ import green from "./green.png";
 import { PageWrapper } from "./state";
 import Nav from "./components/Nav";
 import Cookie from "./components/Cookie";
+import Hover from "./components/Hover";
 
 function App() {
   return (
@@ -19,9 +20,11 @@ function App() {
       </Header>
       <Nav />
       <Cookie />
+
       <Container>
         <h2>Super Cool</h2>
         <CardGrid>
+          <Hover />
           <Card style={{ background: "var(--purp)" }}>
             <h3>Some card</h3>
             <img src={purp} alt="Pretty pic" />

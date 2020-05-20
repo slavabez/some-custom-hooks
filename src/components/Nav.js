@@ -3,9 +3,9 @@ import { useAppContext } from "../state";
 import { useScrollFreeze } from "../hooks";
 
 const NavWrapper = () => {
-  const {isMenuOpen} = useAppContext();
+  const { isMenuOpen } = useAppContext();
   if (!isMenuOpen) return null;
-  return <Nav/>
+  return <Nav />;
 };
 
 const Nav = () => {
