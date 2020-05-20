@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useContext } from "react";
 import { useToggle } from "../hooks";
 
 export const AppContext = createContext({
@@ -19,3 +19,5 @@ export const PageWrapper = ({ children }) => {
     </AppContext.Provider>
   );
 };
+
+export const useAppContext = () => useContext(AppContext);

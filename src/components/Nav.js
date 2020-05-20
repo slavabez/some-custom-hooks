@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { AppContext } from "../state/PageWrapper";
+import { useAppContext } from "../state";
 
 const Nav = () => {
-  const { isMenuOpen, toggleMenu } = useContext(AppContext);
+  const { isMenuOpen, toggleMenu } = useAppContext();
 
   if (!isMenuOpen) return null;
   return (
