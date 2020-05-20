@@ -6,7 +6,6 @@ import blue from "./blue.png";
 import purp from "./purp.png";
 import black from "./black.png";
 import green from "./green.png";
-import Hover from "./components/Hover";
 import { PageWrapper } from "./state";
 import Nav from "./components/Nav";
 import Cookie from "./components/Cookie";
@@ -25,19 +24,19 @@ function App() {
         <CardGrid>
           <Card style={{ background: "var(--purp)" }}>
             <h3>Some card</h3>
-            <img src={purp} />
+            <img src={purp} alt="Pretty pic" />
           </Card>
           <Card style={{ background: "var(--blue)" }}>
             <h3>Some card</h3>
-            <img src={blue} />
+            <img src={blue} alt="Pretty pic" />
           </Card>
           <Card style={{ background: "var(--black)" }}>
             <h3>Some card</h3>
-            <img src={black} />
+            <img src={black} alt="Pretty pic" />
           </Card>
           <Card style={{ background: "var(--green)" }}>
             <h3>Some card</h3>
-            <img src={green} />
+            <img src={green} alt="Pretty pic" />
           </Card>
         </CardGrid>
       </Container>

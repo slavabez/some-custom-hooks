@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useAppContext } from "../state";
+import { useScrollFreeze } from "../hooks";
 
 const Nav = () => {
   const { isMenuOpen, toggleMenu } = useAppContext();
+  useScrollFreeze();
 
   if (!isMenuOpen) return null;
   return (

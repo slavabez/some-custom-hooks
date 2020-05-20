@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AppContext } from "./state";
 
 const Menu = () => {
-  const { isMenuOpen, toggleMenu } = useContext(AppContext);
+  const { toggleMenu } = useContext(AppContext);
 
   return (
     <button onClick={toggleMenu}>
