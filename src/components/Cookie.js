@@ -1,17 +1,17 @@
 import React from "react";
-import { useCookies } from "../hooks";
+import { useLocalStorage } from "../hooks";
 
 const Cookie = () => {
-  const [cookie, setCookie] = useCookies({ key: "lol" });
+  const [value, setValue] = useLocalStorage("lol", "Ouch!");
 
   return (
     <div>
-      <p>{cookie}</p>
+      <p>{value}</p>
       <input
         type="text"
-        value={cookie || ""}
+        value={value || ""}
         onChange={(e) => {
-          setCookie(e.target.value);
+          setValue(e.target.value);
         }}
       />
     </div>

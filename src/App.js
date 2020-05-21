@@ -1,15 +1,16 @@
 import React from "react";
-import { Card, CardGrid, Container, Header } from "./Elements";
-import "./App.css";
-import Menu from "./Menu";
-import blue from "./blue.png";
-import purp from "./purp.png";
-import black from "./black.png";
-import green from "./green.png";
-import { PageWrapper } from "./state";
-import Nav from "./components/Nav";
 import Cookie from "./components/Cookie";
 import Hover from "./components/Hover";
+import Menu from "./Menu";
+import Nav from "./components/Nav";
+import black from "./black.png";
+import blue from "./blue.png";
+import green from "./green.png";
+import purp from "./purp.png";
+import "./App.css";
+import { Card, CardGrid, Container, Header } from "./Elements";
+import { PageWrapper } from "./state";
+import Theme from "./components/Theme";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       </Header>
       <Nav />
       <Cookie />
-
+      <Theme />
       <Container>
         <h2>Super Cool</h2>
         <CardGrid>

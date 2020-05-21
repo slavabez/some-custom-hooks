@@ -20,4 +20,3 @@ export const useIncrement = ({
 
   return [value, { increment, decrement, reset }];
 };
-

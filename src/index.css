@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background: var(--bg);
+}
+
+body.dark {
+  --bg: #333;
+  --text: white;
+}
+
+body.blue {
+  --bg: #09148d;
+  --text: white;
+}
